@@ -1,7 +1,10 @@
 
+
 # TimeOff.Management
 
-Web application for managing employee absences.
+This is a fork of the web application for managing employee absences created at
+
+https://github.com/timeoff-management/
 
 <a href="https://travis-ci.org/timeoff-management/timeoff-management-application"><img align="right" src="https://travis-ci.org/timeoff-management/timeoff-management-application.svg?branch=master" alt="Build status" /></a>
 
@@ -122,8 +125,27 @@ npm run-script db-update
 npm start
 ```
 
+## Deploying with pm2 on AWS
+
+Clone repository:
+
+```bash
+git clone {repo}
+cd {repo}
+cp app_sample.json app.json
+nano app.json
+cp db_sample.json
+nano db.json
+```
+
+```bash
+npm install pm2 -g
+cd folder
+pm2 start ./bin/wwww
+```
+Configure Apache for proxy
+
 
 ## Feedback
 
 Please report any issues or feedback to <a href="https://twitter.com/FreeTimeOffApp">twitter</a> or Email: pavlo at timeoff.management
-
