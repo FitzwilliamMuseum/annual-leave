@@ -1,0 +1,10 @@
+
+*.swp
+*.swo
+*.swn
+*.swm
+node_modules/
+*.sqlite
+.DS_Store
+app.json
+db.json
