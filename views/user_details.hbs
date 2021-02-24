@@ -1,0 +1,44 @@
+
+{{> header }}
+
+<h1>{{employee.name}} {{employee.lastname}}'s details {{#with employee }}{{#unless this.is_active}}<span class="badge alert-warning">Deactivated</span>{{/unless}}{{/with}}</h1>
+
+<div class=" shadow-sm p-3 mx-auto mb-3 bg-white">
+    <form id="add_new_user_frm" method="post" action="/users/delete/{{employee.id}}/" onsubmit="return confirm('Do you really want to delete the user {{employee.name}} {{employee.lastname}}?');">
+        <button id="remove_btn" type="submit" class="d-block btn btn-danger" data-toggle="tooltip" data-placement="top" title="Remove employee"><i class="fa fa-trash"></i> Delete this employee (no going back!)</button>
+    </form>
+</div>
+
+
+{{> show_flash_messages }}
+<div class="row">
+<div class="col-md-4 list-group">
+  <a href="/users/edit/{{employee.id}}/" class="list-group-item{{# if show_main_tab }} selected-item{{/if}}">General details</a>
+  <a href="/users/edit/{{employee.id}}/schedule/" class="list-group-item {{# if show_schedule_tab }} selected-item{{/if}}">Schedule</a>
+  <a href="/users/edit/{{employee.id}}/calendar/" class="list-group-item {{# if show_calendar_tab }} selected-item{{/if}}">Calendar</a>
+  <a href="/users/edit/{{employee.id}}/absences/" class="list-group-item{{# if show_absence_tab }} selected-item{{/if}}">Absences</a>
+</div>
+
+<div class="col-8 shadow-sm p-3 mx-auto mb-3 bg-white">
+{{# if show_absence_tab }}
+
+  {{> user_details/absences }}
+
+{{else if show_schedule_tab}}
+
+  {{> user_details/schedule }}
+
+{{else if show_calendar_tab}}
+
+  {{> user_details/calendar }}
+
+{{else}}
+
+  {{> user_details/general }}
+
+{{/ if}}
+
+</div>
+</div>
+
+{{> footer }}

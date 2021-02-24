@@ -1,0 +1,56 @@
+
+{{> header }}
+
+<h1>Integration API (beta)</h1>
+
+<div class="row col-12 shadow-sm p-3 mx-auto mb-3 bg-white">
+  <p class="lead">Configure access to account data via integration API</p>
+</div>
+
+{{> show_flash_messages }}
+
+  <h2>Description</h2>
+
+
+  <div class="row col-12 shadow-sm p-3 mx-auto mb-3 bg-white">
+
+    <p>annual leave supports sharing <strong>{{ company.name }}'s</strong> data to other software via REST API.</p>
+    <p>This page allows you to {{# if company.integration_api_enabled }}disable{{else}}enable{{/if}} access.</p>
+  </div>
+
+  <h2>Configuration</h2>
+
+<div class="row col-12 shadow-sm p-3 mx-auto mb-3 bg-white">
+
+    <form class="form-horizontal form" action="" method="post">
+      <div class="form-group">
+        <label for="integration_api_enabled" class="control-label">
+          <input
+            id="integration_api_enabled"
+            type="checkbox"
+            {{# if company.integration_api_enabled }} checked="checked" {{/if}}
+            name="integration_api_enabled"
+           />&nbsp;
+           Enable integration API
+          </label>
+      </div>
+      <hr/>
+      <div class="form-group">
+        <label for="token" class=" control-label">API access key</label>
+        <div class="">
+          <input class="form-control" readonly value="{{company.integration_api_token}}" aria-describedby="token_help" type="text" id="token-value">
+        </div>
+        <span id="token_help" class="help-block">Token that allows access to {{company.name}}'s data. <span class="danger">Keep it secret.</span></span>
+      </div>
+      <div class="form-group">
+        <div class="">
+          <div >
+            <button type="submit" class="btn btn-dark" id="regenerate_token_btn" name="regenerate_token" value=1>Regenerate token</button>
+            <button type="submit" class="btn btn-success" id="save_settings_btn">Save integration API configuration</button>
+          </div>
+        </div>
+      </div>
+    </form>
+</div>
+</div>
+{{> footer }}

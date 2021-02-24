@@ -1,0 +1,26 @@
+
+{{> header }}
+
+<h1>{{department.name}} details</h1>
+
+<form method="post" action="/settings/departments/delete/{{ department.id }}/">
+  <div class="row col-md-12 shadow-sm p-3 mx-auto mb-3 bg-white">
+      <button id="remove_btn" type="submit" class="d-block btn btn-danger" data-toggle="tooltip" data-placement="top" title="Remove department"><i class="fa fa-trash"></i> Delete this department</button>
+  </div>
+</form>
+
+
+{{> show_flash_messages }}
+<div class="row col-md-12">
+  <div class="col-md-4 shadow-sm p-3  mb-3  bg-white">
+    <div >
+      <a href="/settings/departments/edit/{{department.id}}/" class="list-group-item selected-item">General details</a>
+      <a href="/users/?department={{ department.id }}" class="list-group-item">Employees from department</a>
+    </div>
+  </div>
+
+  <div class="col-md-8 shadow-sm p-3  mb-3 bg-white">
+    {{> department_details/general }}
+  </div>
+</div>
+{{> footer }}
