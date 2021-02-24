@@ -11,6 +11,7 @@
 
 
 {{> show_flash_messages }}
+<div class="row shadow-sm p-3 mx-auto mb-3 bg-white">
 <div class="col-md-4 list-group">
   <a href="/users/edit/{{employee.id}}/" class="list-group-item{{# if show_main_tab }} selected-item{{/if}}">General details</a>
   <a href="/users/edit/{{employee.id}}/schedule/" class="list-group-item {{# if show_schedule_tab }} selected-item{{/if}}">Schedule</a>
@@ -18,7 +19,6 @@
   <a href="/users/edit/{{employee.id}}/absences/" class="list-group-item{{# if show_absence_tab }} selected-item{{/if}}">Absences</a>
 </div>
 
-<div class="shadow-sm p-3 mx-auto mb-3 bg-white">
 {{# if show_absence_tab }}
 
   {{> user_details/absences }}
