@@ -43,7 +43,7 @@
 
         {{# if leave_type_statistics }}
           {{# each leave_type_statistics }}
-            <dd><em>{{this.leave_type.name}}:</em> <span class="pull-right">{{this.days_taken}}{{# if this.limit}} out of {{this.limit}}{{/if}}</span></dd>
+            <dd>{{this.leave_type.name}}: <span class="pull-right">{{this.days_taken}}{{# if this.limit}} out of {{this.limit}}{{/if}}</span></dd>
           {{/each}}
         {{else}}
 

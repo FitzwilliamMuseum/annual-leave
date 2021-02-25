@@ -28,7 +28,7 @@
       {{# each department.supervisors }}
 
       <li class="list-group-item">
-        <span><a href='/users/edit/{{ this.id }}/'>{{ this.full_name }}</a> <button type="submit" name="remove_supervisor_id" value="{{this.id}}" class="pull-right btn btn-link btn-xs"><i class="fa fa-trash"></i> Remove</button><span>
+        <span><a href='/users/edit/{{ this.id }}/'>{{ this.full_name }}</a> <button type="submit" name="remove_supervisor_id" value="{{this.id}}" class="pull-right btn btn-dark btn-xs"><i class="fa fa-trash"></i> Remove</button><span>
       </li>
       {{/ each }}
 

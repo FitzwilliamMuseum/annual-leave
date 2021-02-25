@@ -37,7 +37,7 @@
 
       {{# if leave_type_statistics }}
         {{# each leave_type_statistics }}
-          <dd><em>{{this.leave_type.name}}:</em> <span class="pull-right">{{this.days_taken}}{{# if this.limit}} out of {{this.limit}}{{/if}}</span></dd>
+          <dd>{{this.leave_type.name}}: <span class="pull-right">{{this.days_taken}}{{# if this.limit}} out of {{this.limit}}{{/if}}</span></dd>
         {{/each}}
       {{else}}
 
@@ -68,7 +68,7 @@
 <div class="row col-12 shadow-sm p-3 mx-auto mb-3 bg-white">
   <div class="col-md-2">
     {{#if show_full_year}}
-    <a class="btn btn-default" href="/calendar/?year={{previous_year}}{{#if show_full_year}}&show_full_year=1{{/if}}"><span aria-hidden="true" class="fa fa-chevron-left"></span> {{previous_year}} </a>
+    <a class="btn btn-dark" href="/calendar/?year={{previous_year}}{{#if show_full_year}}&show_full_year=1{{/if}}"><span aria-hidden="true" class="fa fa-chevron-left"></span> {{previous_year}} </a>
     {{/if}}
   </div>
   <div class="col-md-8 calendar-section-caption">
@@ -77,16 +77,16 @@
     &nbsp;
 
     {{# unless show_full_year}}
-    <a class="btn btn-default" href="/calendar/?show_full_year=1">More... &nbsp;<span class="fa fa-plus"></span></a>
+    <a class="btn btn-dark" href="/calendar/?show_full_year=1">More... &nbsp;<span class="fa fa-plus"></span></a>
     {{else}}
-    <a class="btn btn-default" href="/calendar/">Less... &nbsp;<span class="fa fa-minus"></span></a>
+    <a class="btn btn-dar," href="/calendar/">Less... &nbsp;<span class="fa fa-minus"></span></a>
     {{/unless}}
 
 
   </div>
   <div class="col-md-2">
     {{#if show_full_year}}
-    <a class="btn btn-default pull-right" href="/calendar/?year={{next_year}}{{#if show_full_year}}&show_full_year=1{{/if}}">{{next_year}} <span aria-hidden="true" class="fa fa-chevron-right"></span></a>
+    <a class="btn btn-dark pull-right" href="/calendar/?year={{next_year}}{{#if show_full_year}}&show_full_year=1{{/if}}">{{next_year}} <span aria-hidden="true" class="fa fa-chevron-right"></span></a>
     {{/if}}
   </div>
 </div>

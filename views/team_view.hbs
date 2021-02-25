@@ -15,21 +15,23 @@
 <nav>
   <div class="row">
     <div class="col-md-2">
-      <a class="btn btn-link btn" href="/calendar/teamview/?{{> team_view_url_parameters base_date = prev_date }}"><span aria-hidden="true" class="fa fa-chevron-left"></span> {{as_date_formatted prev_date 'MMM' }}</a>
+      <a class="btn btn-dark btn" href="/calendar/teamview/?{{> team_view_url_parameters base_date = prev_date }}"><span aria-hidden="true" class="fa fa-chevron-left"></span> {{as_date_formatted prev_date 'MMM' }}</a>
     </div>
 
     <div class="col-md-8 calendar-section-caption">
-        <button id="team_view_month_select_btn" class="btn btn-link btn" data-tom="/calendar/teamview/?{{> team_view_url_parameters base_date=0 }}" data-provide="datepicker" data-date-format="yyyy-mm" data-date-autoclose="1" data-date-min-view-mode="months">{{as_date_formatted base_date 'MMMM, YYYY' }} <i class="fa fa-angle-down"></i></button>
+        <button id="team_view_month_select_btn" class="btn btn-dark btn" data-tom="/calendar/teamview/?{{> team_view_url_parameters base_date=0 }}" data-provide="datepicker" data-date-format="yyyy-mm" data-date-autoclose="1" data-date-min-view-mode="months">{{as_date_formatted base_date 'MMMM, YYYY' }} <i class="fa fa-angle-down"></i></button>
     </div>
 
     <div class="col-md-2">
-      <a class="btn btn-link btn align-right" href="/calendar/teamview/?{{> team_view_url_parameters base_date = next_date }}">{{as_date_formatted next_date 'MMM'}} <span aria-hidden="true" class="fa fa-chevron-right"></span></a>
+      <a class="btn btn-dark btn align-right" href="/calendar/teamview/?{{> team_view_url_parameters base_date = next_date }}">{{as_date_formatted next_date 'MMM'}} <span aria-hidden="true" class="fa fa-chevron-right"></span></a>
     </div>
   </div>
 </nav>
 </div>
 
 <div class="col-12 shadow-sm p-3 mx-auto mb-3 bg-white">
+  <p><em class="text-muted">Scroll table horizontally</em></p>
+
     <table class="team-view-table table-striped table table-responsive" style="min-height:140px;">
 
       <thead>
