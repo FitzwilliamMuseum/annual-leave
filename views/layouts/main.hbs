@@ -22,6 +22,16 @@
     {{#each custom_css}}
     <link rel="stylesheet" href="{{this}}" />
     {{/each}}
+    {{~# is_ga_analytics_on ~}}
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ get_ga_analytics_code }}"></script>
+      <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', '{{ get_ga_analytics_code }}');
+      </script>
+    {{~/ is_ga_analytics_on ~}}
   </head>
 
   <body class="doc-body">
@@ -42,17 +52,5 @@
     <script defer type="text/javascript" src="/js/config.js"></script>
     <script defer type="text/javascript" src="/js/klaro.js"></script>
     <script src="/js/backtotop.js"></script>
-
-    {{~# is_ga_analytics_on ~}}
-    <script async src="https://www.googletagmanager.com/gtag/js?id={{ get_ga_analytics_code }}"></script>
-      <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', '{{ get_ga_analytics_code }}');
-      </script>
-    {{~/ is_ga_analytics_on ~}}
-
   </body>
 </html>
