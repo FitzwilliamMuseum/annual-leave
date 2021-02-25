@@ -18,7 +18,7 @@
     ></i>
   </dt>
     <dd>
-      <em>Nominal allowance </em>
+      Nominal allowance
       <span class="pull-right"
         data-content="Allowance derived from department current user belongs to."
         data-placement="top"
@@ -28,7 +28,7 @@
       >{{ user_allowance.nominal_allowance }}</span>
     </dd>
     <dd>
-      <em>Carried over from {{#if previous_year}}{{previous_year}}{{else}}previous year{{/if}}</em>
+      Carried over from {{#if previous_year}}{{previous_year}}{{else}}previous year{{/if}}
       <span class="pull-right"
         data-content="Allowance carried over from previous year. Note: this amount is calculated on the very first day of the year."
         data-placement="top"
@@ -38,7 +38,7 @@
       >{{ user_allowance.carry_over }}</span>
     </dd>
     <dd>
-      <em>Individual adjustment</em>
+      Individual adjustment
       <span class="pull-right"
         data-content="Adjustment to allowance done by admin user."
         data-placement="top"
@@ -47,7 +47,7 @@
       >{{ user_allowance.manual_adjustment }}</span>
     </dd>
     <dd>
-      <em>Start/end of employment</em>
+      Start/end of employment
       <span class="pull-right"
         data-content="Automatic adjustment to allowance based on employee's start and end day of employment."
         data-placement="top"
@@ -56,7 +56,7 @@
       >{{ user_allowance.employement_range_adjustment }}</span>
     </dd>
     <dd>
-      <em>Used so far</em>
+      Used so far
       <span class="pull-right"
         data-content="Number of days already taken from allowance."
         data-placement="top"
@@ -66,7 +66,7 @@
     </dd>
     {{# if user_allowance.is_accrued_allowance }}
       <dd>
-        <em>Locked so far</em>
+        Locked so far
         <span class="pull-right"
           data-content="Number of unavailable days in allowance due to accrual nature of vacation entitlement."
           data-placement="top"
