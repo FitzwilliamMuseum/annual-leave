@@ -51,12 +51,12 @@
       <dt>Details</dt>
       {{~# each supervisors  ~}}
       <dd>
-        <em>{{# if  @first }} Supervisor: {{ else   }}  &nbsp;   {{/ if  }}</em>
+        {{# if  @first }} Supervisor: {{ else   }}  &nbsp;   {{/ if  }}
         <span class="pull-right"><a href="mailto:{{this.email}}">{{ this.full_name }}</a></span>
       </dd>
       {{~/ each ~}}
-      <dd><em>Department:</em> <span class="pull-right"><a href="/calendar/teamview/?department={{ current_user.department.id }}">{{ current_user.department.name }}</a></span></dd>
-      <dd><em>Allowance in {{current_year}}:</em><span class="pull-right"> {{ user_allowance.total_number_of_days_in_allowance }} days</span><dd>
+      <dd>Department: <span class="pull-right"><a href="/calendar/teamview/?department={{ current_user.department.id }}">{{ current_user.department.name }}</a></span></dd>
+      <dd>Allowance in {{current_year}}: <span class="pull-right"> {{ user_allowance.total_number_of_days_in_allowance }} days</span><dd>
     </dl>
   </div>
 
