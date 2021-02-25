@@ -89,10 +89,10 @@
                 <div class="col-md-offset-4 col-md-8">
                   <div class="checkbox">
                     <label for="share-all-absences">
-                      <input id="share-all-absences" type="checkbox" name="share_all_absences" {{# if company.share_all_absences }} checked="checked"{{/if}}>Share absences between employees
+                      <input id="share-all-absences" class="mr-2" type="checkbox" name="share_all_absences" {{# if company.share_all_absences }} checked="checked"{{/if}}>Share absences between employees
                     </label>
                     <p>
-                      <em>If enabled all employees can see information about everybody's absences regardless departments.</em>
+                      If enabled all employees can see information about everybody's absences regardless departments.
                     </p>
                   </div>
                 </div>
@@ -102,10 +102,10 @@
                 <div class="col-md-offset-4 col-md-8">
                   <div class="checkbox">
                     <label for="is-team-view-hidden">
-                      <input id="is-team-view-hidden" type="checkbox" name="is_team_view_hidden" {{# if company.is_team_view_hidden }} checked="checked"{{/if}}>Hide Team View page for non-admin users
+                      <input class="mr-2" id="is-team-view-hidden" type="checkbox" name="is_team_view_hidden" {{# if company.is_team_view_hidden }} checked="checked"{{/if}}>Hide Team View page for non-admin users
                     </label>
                     <p>
-                      <em>If marked Team view page is shown only to admin users.</em>
+                      If marked Team view page is shown only to admin users.
                     </p>
                   </div>
                 </div>
@@ -120,14 +120,14 @@
             </form>
           </div>
 
-          <div class="col-md-offset-1 col-md-5">
+          <div class="col-md-6">
 
             <div class="form-horizontal">
               <h3>Backup employees' leave data</h3>
 
               <div class="form-group">
                 <div class="col-md-offset-2">
-                  <em>Download the full list of employees with all their leave requests. The file is in <strong>.CSV</strong> format which is compatible with MS Excel.</em>
+                  Download the full list of employees with all their leave requests. The file is in <strong>.CSV</strong> format which is compatible with MS Excel.
                 </div>
               </div>
               <div class="form-group">
@@ -140,7 +140,8 @@
             <form class="form-horizontal" method="POST" action="/settings/schedule" id="company_schedule_form">
             <input type="hidden" name="company_wide" value="1">
             <div class="form-group">
-              <label for="" class="col-md-6 control-label">Company week schedule</label>
+              <label for="" class="col-md-12 control-label"><strong>Company week schedule</strong></label>
+              <hr/>
             </div>
             <div class="form-group">
               <div class="col-md-offset-2">
@@ -149,7 +150,7 @@
             </div>
             <div class="form-group">
               <div class="col-md-offset-2">
-                <em>Define company wide weekly schedule. Press correspondent button to toggle working/non-working day.</em>
+                <p>Define company wide weekly schedule. Press correspondent button to toggle working/non-working day.</p>
               </div>
             </div>
             <div class="form-group">
@@ -161,16 +162,17 @@
 
             <div class="form-horizontal">
               <div class="form-group">
-                <label for="" class="col-md-10 control-label">Calculate and carry over unused allowance</label>
+                <label for="" class="col-md-12 control-label"><strong>Calculate and carry over unused allowance</strong></label>
+                <hr/>
               </div>
               <div class="form-group">
                 <div class="col-md-offset-2">
-                  <p><em>This action will carry over unused allowance for each employee from <strong>{{yearPrev}}</strong> to the current year, <strong>{{yearCurrent}}</strong>.</em></p>
-                  <p><em>Please note, employees allowance is going to be updated.</em></p>
+                  <p>This action will carry over unused allowance for each employee from <strong>{{yearPrev}}</strong> to the current year, <strong>{{yearCurrent}}</strong>.</p>
+                  <p>Please note, employees allowance is going to be updated.</p>
                 </div>
               </div>
               <div class="form-group">
-                <form class="col-md-offset-2 col-md-11" id="calculate_carry_over_form" method="post" action="/settings/carryOverUnusedAllowance">
+                <form class="col-md-12" id="calculate_carry_over_form" method="post" action="/settings/carryOverUnusedAllowance">
                   <button class="btn btn-success pull-right" type="submit"><i class="fa fa-share"></i> Carry over allowance</button>
                 </form>
               </div>
@@ -228,11 +230,11 @@
                 <input type="hidden" name="color__{{ this.id }}" value="{{# with this }}{{ this.get_color_class }}{{/with}}">
                 <button type="button" class="btn btn-default dropdown-toggle {{# with this }}{{ this.get_color_class }}{{/with}}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-paint-brush"></i></button>
                 <ul class="dropdown-menu">
-                  <li><a href="#" class="btn btd-default leave_type_color_1" data-tom-color-picker-css-class="leave_type_color_1">Color 1</a></li>
-                  <li><a href="#" class="btn btd-default leave_type_color_2" data-tom-color-picker-css-class="leave_type_color_2">Color 2</a></li>
-                  <li><a href="#" class="btn btd-default leave_type_color_3" data-tom-color-picker-css-class="leave_type_color_3">Color 3</a></li>
-                  <li><a href="#" class="btn btd-default leave_type_color_4" data-tom-color-picker-css-class="leave_type_color_4">Color 4</a></li>
-                  <li><a href="#" class="btn btd-default leave_type_color_5" data-tom-color-picker-css-class="leave_type_color_5">Color 5</a></li>
+                  <li><a href="#" class="btn btd-default leave_type_color_1 dropdown-item" data-tom-color-picker-css-class="leave_type_color_1">Color 1</a></li>
+                  <li><a href="#" class="btn btd-default leave_type_color_2 dropdown-item" data-tom-color-picker-css-class="leave_type_color_2">Color 2</a></li>
+                  <li><a href="#" class="btn btd-default leave_type_color_3 dropdown-item" data-tom-color-picker-css-class="leave_type_color_3">Color 3</a></li>
+                  <li><a href="#" class="btn btd-default leave_type_color_4 dropdown-item" data-tom-color-picker-css-class="leave_type_color_4">Color 4</a></li>
+                  <li><a href="#" class="btn btd-default leave_type_color_5 dropdown-item" data-tom-color-picker-css-class="leave_type_color_5">Color 5</a></li>
                 </ul>
               </div>
 
@@ -271,44 +273,39 @@
   </div>
 </div>
 
+  <h2>
+    Bank Holidays
+  </h2>
   <div class="row col-12 shadow-sm p-3 mx-auto mb-3 bg-white">
 
-    <div class="panel panel-default">
-      <h2>
-        Bank Holidays
-      </h2>
-      <div class="panel-body">
-        <div class="row">
-          <div class="col-md-12 tst-no-bank-holidays">Bank holidays could be found <a href="/settings/bankholidays/">here</a></div>
-        </div>
-      </div>
-    </div>
+
+
+
+    <div class="col-md-12 tst-no-bank-holidays"><a class="d-block btn btn-dark" href="/settings/bankholidays/">Bank holiday configuration</a></div>
+
   </div>
 
 
-
+  <h2>
+    <i class="fa fa-bomb"></i> Danger zone
+  </h2>
 <div class=" col-12 shadow-sm p-3 mx-auto mb-3 bg-white">
   <div class="col-md-12">
     <div class="panel panel-danger">
-      <h1>
-        <i class="fa fa-bomb"></i> Danger zone
-      </h1>
+
       <div class="panel-body">
 
           <div class="col-md-12">
 
             <div class="form-horizontal">
               <div class="form-group">
-                <label for="" class="control-label">Remove company account</label>
-              </div>
-              <div class="form-group">
                 <div class="col-md-6">
-                  <p><em>Completely erase data associated with {{company.name}}'s account.</em></p>
-                  <p><em> This is action cannot be reverted.</em></p>
-                  <p><em> It is strongly recommended to <a href="/settings/company/backup/">download</a> employees leave data first.</em></p>
+                  <p>Completely erase data associated with {{company.name}}'s account.</p>
+                  <p class="text-danger"><strong>This is action cannot be reverted.</strong></p>
+                  <p>It is strongly recommended to <a href="/settings/company/backup/">download</a> employees leave data first.</p>
                 </div>
-                <div class="col-md-6">
-                  <button class="btn btn-danger pull-right" data-toggle="modal" data-target="#remove_company_modal" type="button"><i class="fa fa-remove"></i> Delete company account</button>
+                <div class="col-md-12">
+                  <button class="btn btn-danger d-block" data-toggle="modal" data-target="#remove_company_modal" type="button"><i class="fa fa-remove"></i> Delete company account</button>
                 </div>
               </div>
             </div>
