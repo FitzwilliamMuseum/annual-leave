@@ -15,26 +15,26 @@
 
   <div class="form-group">
     <label class="control-label">Overview</label>
-    <div class="progress bigger">
+    <div class="progress " style="height: 40px;">
       <div
-        class="progress-bar progress-bar-success"
-        style="width: {{ leave_statistics.used_so_far_percent }}%"
+        class="progress-bar bg-danger"
+        style="width: {{ leave_statistics.used_so_far_percent }}% "
         data-content="{{# with employee }}{{this.full_name }}{{/with}} in current year used {{ leave_statistics.used_so_far }} days from allowance"
         data-placement="top"
         data-toggle="popover"
         data-trigger="focus hover"
       >
-        {{ leave_statistics.used_so_far }} days used so far
+        {{ leave_statistics.used_so_far }} days used
       </div>
       <div
-        class="progress-bar progress-bar-warning"
+        class="progress-bar bg-info"
         style="width: {{ leave_statistics.remaining_percent }}%"
         data-content="{{# with employee }}{{this.full_name }}{{/with}} in current year has {{ leave_statistics.remaining }} remaining days in allowance"
         data-placement="top"
         data-toggle="popover"
         data-trigger="focus hover"
       >
-        {{ leave_statistics.remaining  }} days remaining in current year
+        {{ leave_statistics.remaining  }} days remaining
       </div>
     </div>
   </div>

@@ -2,6 +2,9 @@
 {{# each grouped_leaves}}
   <h2>{{this.year}}</h2>
   {{> user_requests leaves=this.leaves no_header=1 logged_user=../logged_user}}
-  <p>Days would be deducted from allowance: <span>{{ this.total_deduction }}</span></p>
-  <div class="main-row_header">&nbsp;</div>
+  <p class="text-danger">
+    <strong>
+      Days deducted from allowance: <span>{{ this.total_deduction }}</span>
+    </strong>
+  </p>
 {{/ each}}
