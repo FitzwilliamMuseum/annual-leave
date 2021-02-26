@@ -7,7 +7,7 @@ const
   UserAllowance = require('../../../lib/model/user_allowance'),
   model         = require('../../../lib/model/db');
 
-describe('employement_range_adjustment attribute', function(){
+describe('employment_range_adjustment attribute', function(){
 
   describe('Employee start day is in previouse year and no end date',function(){
     let employee = model.User.build({
@@ -27,7 +27,7 @@ describe('employement_range_adjustment attribute', function(){
         nominal_allowance                   : 20,
       });
 
-      expect( ul.employement_range_adjustment ).to.be.equal(0);
+      expect( ul.employment_range_adjustment ).to.be.equal(0);
     });
   });
 
@@ -48,7 +48,7 @@ describe('employement_range_adjustment attribute', function(){
     });
 
     it('ajustment is made based on end date', function(){
-      expect( ul.employement_range_adjustment ).to.be.equal(-15);
+      expect( ul.employment_range_adjustment ).to.be.equal(-15);
     });
   });
 
@@ -69,7 +69,7 @@ describe('employement_range_adjustment attribute', function(){
     });
 
     it('ajustment is made based on end date', function(){
-      expect( ul.employement_range_adjustment ).to.be.equal(0);
+      expect( ul.employment_range_adjustment ).to.be.equal(0);
     });
   });
 
@@ -89,7 +89,7 @@ describe('employement_range_adjustment attribute', function(){
     });
 
     it('adjustment is made based on start date', function(){
-      expect( ul.employement_range_adjustment ).to.be.equal(-5);
+      expect( ul.employment_range_adjustment ).to.be.equal(-5);
     });
   });
 
@@ -110,7 +110,7 @@ describe('employement_range_adjustment attribute', function(){
     });
 
     it('adjustment is made based on start and end dates', function(){
-      expect( ul.employement_range_adjustment ).to.be.equal(-10);
+      expect( ul.employment_range_adjustment ).to.be.equal(-10);
     });
   });
 
@@ -131,7 +131,7 @@ describe('employement_range_adjustment attribute', function(){
     });
 
     it('adjustment is made based on start date', function(){
-      expect( ul.employement_range_adjustment ).to.be.equal(-5);
+      expect( ul.employment_range_adjustment ).to.be.equal(-5);
     });
   });
 
@@ -151,7 +151,7 @@ describe('employement_range_adjustment attribute', function(){
     });
 
     it('No adjustment is needed', function(){
-      expect( ul.employement_range_adjustment ).to.be.equal(0);
+      expect( ul.employment_range_adjustment ).to.be.equal(0);
     });
   });
 
@@ -172,7 +172,7 @@ describe('employement_range_adjustment attribute', function(){
     });
 
     it('No adjustment is needed', function(){
-      expect( ul.employement_range_adjustment ).to.be.equal(0);
+      expect( ul.employment_range_adjustment ).to.be.equal(0);
     });
   });
 });
