@@ -182,18 +182,6 @@ td.leave_cell_pended {
   display: inline-block;
 }
 
-.main-row_header {
-  /* TODO refactore */
-  border: none;
-  font-weight: normal;
-  color: #5ba4e5;
-  letter-spacing: -0.01em;
-  font-size: 19px;
-  line-height: 1.15em;
-  text-align: left;
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
 
 /* Feeds */
 .feed-calendar-big {
