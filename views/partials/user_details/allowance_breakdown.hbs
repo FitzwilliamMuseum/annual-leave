@@ -7,6 +7,7 @@
     * user_allowance - an object representing current employee's allowance
 
 }}
+{{ user_allowance.manual_adjustment }}
 
 <dl>
   <dt>Allowance breakdown
@@ -19,7 +20,7 @@
   </dt>
     <dd>
       Nominal allowance
-      <span class="pull-right"
+      <span class="pull-right font-weight-bold"
         data-content="Allowance derived from department current user belongs to."
         data-placement="top"
         data-toggle="popover"
@@ -29,7 +30,7 @@
     </dd>
     <dd>
       Carried over from {{#if previous_year}}{{previous_year}}{{else}}previous year{{/if}}
-      <span class="pull-right"
+      <span class="pull-right font-weight-bold"
         data-content="Allowance carried over from previous year. Note: this amount is calculated on the very first day of the year."
         data-placement="top"
         data-toggle="popover"
@@ -39,7 +40,7 @@
     </dd>
     <dd>
       Individual adjustment
-      <span class="pull-right"
+      <span class="pull-right font-weight-bold"
         data-content="Adjustment to allowance done by admin user."
         data-placement="top"
         data-toggle="popover"
@@ -48,7 +49,7 @@
     </dd>
     <dd>
       Start/end of employment
-      <span class="pull-right"
+      <span class="pull-right font-weight-bold"
         data-content="Automatic adjustment to allowance based on employee's start and end day of employment."
         data-placement="top"
         data-toggle="popover"
@@ -57,7 +58,7 @@
     </dd>
     <dd>
       Used so far
-      <span class="pull-right"
+      <span class="pull-right font-weight-bold text-danger"
         data-content="Number of days already taken from allowance."
         data-placement="top"
         data-toggle="popover"
@@ -74,5 +75,16 @@
           data-trigger="focus hover"
         >{{ user_allowance.accrued_adjustment }}</span>
       </dd>
+
+
     {{/ if}}
+    <dd>
+      Allowance with any adjustment:
+      <span class="pull-right font-weight-bold text-danger"
+        data-content="Number of days adjusted."
+        data-placement="top"
+        data-toggle="popover"
+        data-trigger="focus hover"
+      >{{ user_allowance.total_number_of_days_in_allowance }}</span>
+    </dd>
 </dl>

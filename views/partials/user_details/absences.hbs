@@ -11,9 +11,11 @@
   <input type="hidden" name="start_date" value="{{as_date employee.start_date}}">
   <input type="hidden" name="end_date" value="{{as_date employee.end_date}}">
 
+  <h2>Overview</h2>
   {{> user_details/breadcrumb employee=employee }}
+
   <div class="form-group">
-    <label class="control-label">Overview</label>
+    <label class="control-label sr-only">Overview</label>
     <div class="progress " style="height: 40px;">
       <div
         class="progress-bar bg-danger"
@@ -47,9 +49,8 @@
   <div class="form-group">
     <label class="control-label">Is Accrued Allowance?</label>
     <p>{{# if user_allowance.is_accrued_allowance }}Yes{{else}}No{{/if}}</p>
-    <span class="help-block">
-      The way of available allowance calculation is defined on department level. <a href="/settings/departments/edit/{{employee.DepartmentId}}">More details <i class="fa fa-angle-double-right"></i></a>
-    </span>
+
+     <a class="btn d-block btn-dark mt-3 mb-3" href="/settings/departments/edit/{{employee.DepartmentId}}">Configure departmental settings for leave <i class="fa fa-angle-double-right"></i></a>
   </div>
 
   <div class="row">
@@ -102,8 +103,9 @@
     <div id="adjustment_help" class="help-block">
       <ul>
         <li>Tune allowance for this user in current year.</li>
-        <li>Could be negative as well.</li>
-        <li>The value is valid during current year. Next year it needs to be re-confirmed.</li>
+        <li>This could be negative value.</li>
+        <li>The value is valid during current year.</li>
+        <li class="text-danger font-weight-bolder">Next year this allowance needs to be re-confirmed.</li>
       </ul>
     </div>
   </div>
