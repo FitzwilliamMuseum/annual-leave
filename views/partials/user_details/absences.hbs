@@ -12,7 +12,6 @@
   <input type="hidden" name="end_date" value="{{as_date employee.end_date}}">
 
   {{> user_details/breadcrumb employee=employee }}
-
   <div class="form-group">
     <label class="control-label">Overview</label>
     <div class="progress " style="height: 40px;">
@@ -95,7 +94,9 @@
     <div class="input-group col-md-4">
       <input class="form-control mr-2" id="adjustment_inp" type="number" step="0.5" name="adjustment" value="{{#if employee_adjustment }}{{employee_adjustment}}{{else}}0{{/if}}" aria-describedby="adjustment_help">
       <span class="input-group-addon">working days</span>
+      <br />
       <pre>{{employee_adjustment}}</pre>
+      <pre>{{args}}</pre>
     </div>
     <div id="adjustment_help" class="help-block">
       <ul>
