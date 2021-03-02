@@ -17,14 +17,17 @@
         <p class="description-paragraph">Share your annual leave data with external calendar providers such as Microsoft Outlook, Apple Calendar (iCal) or Google Calendar.</p>
 
         <p class="description-paragraph">We provide following streams from:</p>
-        <p class="description-paragraph">
-          <a href="/calendar/">My Calendar</a> page - feeds all data from My Calendar page
-        </p>
-        {{# unless keep_team_view_hidden}}
-        <p class="description-paragraph">
-          <a href="/calendar/teamview/">Team view</a> page - feeds Team view data for current month
-        </p>
-        {{/ unless}}
+        <ul>
+          <li>
+            <a href="/calendar/">My Calendar</a> page - feeds all data from My Calendar page
+          </li>
+
+          {{# unless keep_team_view_hidden}}
+          <li>
+            <a href="/calendar/teamview/">Team view</a> page - feeds Team view data for current month
+          <li>
+          {{/ unless}}
+       </ul>
 
         <p class="description-paragraph">To export particular feed into default calendar application just click on corresponding link.</p>
 
