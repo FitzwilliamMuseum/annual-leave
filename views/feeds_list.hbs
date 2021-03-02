@@ -40,20 +40,20 @@
 
       <div class="col-md-12 ">
         <form method="POST" action="/calendar/feeds/regenerate/">
-        <a href="webcal://{{current_host}}/feed/{{calendar_feed.feed_token}}/ical.ics">My calendar feed <i class="fa fa-rss"></i></a>
+        <a class=" btn btn-dark mb-2" href="webcal://{{current_host}}/feed/{{calendar_feed.feed_token}}/ical.ics">My calendar feed <i class="fa fa-rss"></i> <i class="fas fa-calendar-alt"></i></a>
 
         <input type="hidden" name="token" value="{{calendar_feed.feed_token}}"/>
-        <button type="submit" class="close" aria-label="Close"><span aria-hidden="true"><i class="fa fa-trash"></i></span></button>
+        <button type="submit" class="mb-2 btn btn-dark" aria-label="Close"><span aria-hidden="true">Regenrate my feed <i class="fa fa-recycle"></i></span></button>
         </form>
       </div>
 
       {{# unless keep_team_view_hidden }}
-      <div class="col-md-5 col-md-offset-2 well">
+      <div class="col-md-12 mt-3" >
         <form method="POST" action="/calendar/feeds/regenerate/">
-        <a href="webcal://{{current_host}}/feed/{{team_view_feed.feed_token}}/ical.ics">Team view feed <i class="fa fa-rss"></i></a>
+        <a class=" btn btn-dark" href="webcal://{{current_host}}/feed/{{team_view_feed.feed_token}}/ical.ics">Team view feed <i class="fa fa-rss"></i> <i class="fas fa-calendar-alt"></i></a>
 
         <input type="hidden" name="token" value="{{team_view_feed.feed_token}}"/>
-        <button type="submit" class="close" aria-label="Close"><span aria-hidden="true"><i class="fa fa-trash"></i></span></button>
+        <button type="submit" class="b-2 btn btn-dark" aria-label="Close"><span aria-hidden="true">Regenrate team view feed <i class="fa fa-recycle"></i></span></button>
         </form>
       </div>
       {{/ unless }}
