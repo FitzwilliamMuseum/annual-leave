@@ -128,19 +128,16 @@
 
 {{# unless show_full_year}}
 
-  <div class="row main-row_header col-12 shadow-sm p-3 mx-auto mb-3 bg-white">
-    <p class="col-md-12">All my absences in {{current_year}}</p>
-  </div>
+<h2>All my absences in {{current_year}}</h2>
 <div class="col-12 shadow-sm p-3 mx-auto mb-3 bg-white">
   {{> user_requests leaves=current_user.my_leaves }}
 </div>
 
 {{/unless}}
 
-<h2>Feeds for calendars</h2>
 
-<div class="row main-row_header col-12 shadow-sm p-3 mx-auto mb-3 bg-white">
-  <div class="col-md-12">Calendar <a href="/calendar/feeds/" data-toggle="tooltip" data-placement="right" title="Export absences  to external calendars">   <span class="fa fa-rss"></span></a></div>
+<div class="col-12 shadow-sm p-3 mx-auto mb-3 bg-white">
+      <a class="btn btn-dark d-block" href="/calendar/feeds/" data-toggle="tooltip" data-placement="right" title="Export absences  to external calendars">Feeds for calendars  <span class="fa fa-rss"></span></a>
 </div>
 
 
