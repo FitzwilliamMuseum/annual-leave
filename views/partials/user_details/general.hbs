@@ -43,7 +43,7 @@
         <input class="" id="auto_approve_inp" name="auto_approve" type="checkbox" {{# if employee.auto_approve}} checked="checked"  {{/if}} >
         Auto approve leave requests
       </label>
-      <span class="help-block">Set the flag ON to streamline leave requests from {{#with employee}}{{this.full_name}}{{/with}} directly into <strong>Approved</strong> state.</span>
+      <p class="help-block">Set the flag ON to streamline leave requests from {{#with employee}}{{this.full_name}}{{/with}} directly into <strong>Approved</strong> state.</p>
   </div>
 
   <div class="form-group">
@@ -83,7 +83,7 @@
 
   <div class="form-group">
     <label for="link_to_email_audit" class="control-label">
-      <a href="/audit/email/?user_id={{employee.id}}">Emails ever sent to {{#with employee}}{{this.full_name}}{{/with}}</a>
+      <a  class="btn btn-dark" href="/audit/email/?user_id={{employee.id}}">Emails ever sent to {{#with employee}}{{this.full_name}}{{/with}}</a>
     </label>
   </div>
 </div>
