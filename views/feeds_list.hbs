@@ -25,7 +25,7 @@
           {{# unless keep_team_view_hidden}}
           <li>
             <a href="/calendar/teamview/">Team view</a> page - feeds Team view data for current month
-          <li>
+          </li>
           {{/ unless}}
        </ul>
 
@@ -36,9 +36,9 @@
       </div>
     </div>
 
-    <div class="row feeds-holder">
+    <div class=" feeds-holder">
 
-      <div class="col-md-5 well">
+      <div class="col-md-12 ">
         <form method="POST" action="/calendar/feeds/regenerate/">
         <a href="webcal://{{current_host}}/feed/{{calendar_feed.feed_token}}/ical.ics">My calendar feed <i class="fa fa-rss"></i></a>
 
