@@ -43,7 +43,7 @@
               <span class="caret"></span>
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-              <li><a  href="?{{> team_view_url_parameters current_department = null }}" class="dropdown-item">All</a></li>
+              <li><a href="/calendar/teamview/?{{> team_view_url_parameters current_department = null }}" class="dropdown-item">All</a></li>
               <li role="separator" class="divider"></li>
               {{#each related_departments}}
               <li><a class="dropdown-item" href="?{{> team_view_url_parameters base_date = ../base_date current_department = this }}">{{this.name}}</a></li>
